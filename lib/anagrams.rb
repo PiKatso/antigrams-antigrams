@@ -10,12 +10,14 @@ class String
       end
     end
 
-  define_method(:antigram?) do |word|
+  define_method(:antigram?) do |word| #fix me!!
+    # letters = self.split("")
     if(self.downcase.chars.sort != word.downcase.chars.sort)
       return "you have got yourself and antigram"
-    else
-      return "this is not an antigram"
+    else()
+      return "tthis is not an antigram but has matching letters"
     end
+
   end
 
   def palidrome?
