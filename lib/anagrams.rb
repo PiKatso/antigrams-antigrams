@@ -1,5 +1,5 @@
 # ruby code
-class Word_checker
+class String
   define_method(:anagram?) do |word|
      if(self.downcase.chars.sort == word.downcase.chars.sort)
         true
@@ -21,5 +21,13 @@ class Word_checker
   end
 
   def valid_word?
-    
+    word = self.split
+    if word.include?(/[aeiouy]+/i)
+      true
+      "it is a valid word"
+    else
+      false
+      "please enter a valid word"
+    end
+  end
 end
