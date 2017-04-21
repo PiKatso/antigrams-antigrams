@@ -1,5 +1,5 @@
 # ruby code
-class String
+class Word_checker
   define_method(:anagram?) do |word|
      if(self.downcase.chars.sort == word.downcase.chars.sort)
         true
@@ -19,4 +19,7 @@ class String
       "it is not a palidrome"
     end
   end
+
+  def valid_word?
+    
 end
