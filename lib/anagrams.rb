@@ -13,10 +13,10 @@ class String
   define_method(:antigram?) do |word|
     if(self.downcase.chars.sort != word.downcase.chars.sort)
       true
-      return "this is not an antigram"
+      return "you have got yourself and antigram"
     else
       false
-      return "you've got yourself and antigram"
+      return "this is not an antigram"
     end
   end
 
