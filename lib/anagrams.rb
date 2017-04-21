@@ -12,32 +12,30 @@ class String
 
   define_method(:antigram?) do |word|
     if(self.downcase.chars.sort != word.downcase.chars.sort)
-      true
       return "you have got yourself and antigram"
     else
-      false
       return "this is not an antigram"
     end
   end
 
   def palidrome?
     if self.downcase == self.downcase.reverse
-      true
       "it is a palidrome"
     else
-      false
       "it is not a palidrome"
     end
   end
 
-  def valid_word?
-    word = self.split
-    if word.select(/[aeiouy]+/i)
-      true
-      "it is a valid word"
+  define_method(:valid_word?) do  #fix me!!
+    lets = self.downcase.split("")
+    output_lets = []
+    lets.each() do |input|
+    word = input.downcase
+    if word.include?('a') || word.include?('e') || word.include?('i') || word.include?('o') || word.include?('u') || word.include?('y')
+      return "it is a valid word"
     else
-      false
-      "please enter a valid word"
+      return "please enter a valid word"
     end
+  end
   end
 end
