@@ -10,6 +10,16 @@ class String
       end
     end
 
+  define_method(:antigram?) do |word|
+    if(self.downcase.chars.sort != word.downcase.chars.sort)
+      true
+      return "this is not an antigram"
+    else
+      false
+      return "you've got yourself and antigram"
+    end
+  end
+
   def palidrome?
     if self.downcase == self.downcase.reverse
       true
@@ -22,7 +32,7 @@ class String
 
   def valid_word?
     word = self.split
-    if word.include?(/[aeiouy]+/i)
+    if word.select(/[aeiouy]+/i)
       true
       "it is a valid word"
     else

@@ -23,4 +23,14 @@ describe 'String#valid_word?' do
   it 'if user input is not an anagram, check if it is an actual word' do
     expect('urby'.valid_word?).to(eq 'please enter a valid word')
   end
+
+  it 'if user input is not an anagram, check if it is an actual word' do
+    expect('ruby'.valid_word?).to(eq 'it is a valid word')
+  end
+end
+
+describe 'String#antigram?' do
+  it 'if user input is not an anagram, check if it is an antigram' do
+    expect('hi'.antigram?('bye')).to(eq'this is not an antigram')
+  end
 end
