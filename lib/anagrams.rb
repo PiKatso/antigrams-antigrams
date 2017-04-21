@@ -26,16 +26,16 @@ class String
     end
   end
 
-  define_method(:valid_word?) do  #fix me!!
-    lets = self.downcase.split("")
-    output_lets = []
-    lets.each() do |input|
-    word = input.downcase
-    if word.include?('a') || word.include?('e') || word.include?('i') || word.include?('o') || word.include?('u') || word.include?('y')
-      return "it is a valid word"
+  define_method(:valid_word) do
+    letters = self.split("")
+    output = ""
+    letters.each() do |letter|
+    if letter.include?("a") | letter.include?("e") | letter.include?("i")  |letter.include?("o") |letter.include?("u")| letter.include?("y")
+       output = "it is a valid word"
     else
-      return "please enter a valid word"
+       output = "please enter a valid word"
     end
   end
+  output
   end
 end

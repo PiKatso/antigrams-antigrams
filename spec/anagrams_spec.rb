@@ -19,13 +19,13 @@ describe 'String#palidrome?' do
   end
 end
 
-describe 'String#valid_word?' do
+describe 'String#valid_word' do
   it 'if user input is not an anagram, check if it is an actual word' do
-    expect('urby'.valid_word?).to(eq 'please enter a valid word')
+    expect('rhmz'.valid_word).to(eq 'please enter a valid word')
   end
 
   it 'if user input is not an anagram, check if it is an actual word' do
-    expect('hello'.valid_word?).to(eq 'it is a valid word')
+    expect('hello'.valid_word).to(eq 'it is a valid word')
   end
 end
 
