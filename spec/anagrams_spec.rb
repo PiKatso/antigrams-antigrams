@@ -1,14 +1,14 @@
 require 'rspec'
-require 'project_name'
+require 'anagrams'
 
 
-describe 'Class#method_name' do
+describe 'String#anagram' do
   # first spec
-  it 'explanation of what this test tests' do
-    expect('input'.method_name).to(eq 'expected output')
+  it 'takes user input and evaluates if input is valid word' do
+    expect('cat'.anagram).to(eq 'tac')
   end
   # second spec
-  it 'explanation of what this test tests' do
-    expect('input'.method_name).to(eq 'expected output')
-  end
+  # it 'explanation of what this test tests' do
+  #   expect('input'.method_name).to(eq 'expected output')
+  # end
 end

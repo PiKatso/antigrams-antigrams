@@ -1,9 +1,9 @@
 require 'sinatra'
 require 'sinatra/reloader'
-require './lib/project_name'
+require './lib/anagrams'
 also_reload 'lib/**/*.rb'
 
 get '/' do
-  @greeting = "hello Sara".method_test
+  # @greeting = "hello Sara".method_test
   erb(:index)
 end

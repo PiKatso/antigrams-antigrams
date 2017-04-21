@@ -1,6 +1,10 @@
 # ruby code
 class String
-  def method_test
-    self.upcase
+  def anagram
+    self
+
+
+
+    # "please".split('').sort
   end
 end

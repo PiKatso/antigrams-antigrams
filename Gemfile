@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'ffi-aspell'
 gem 'rspec'
 gem 'capybara'
 gem 'pry'
