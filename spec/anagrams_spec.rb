@@ -34,6 +34,6 @@ describe 'String#antigram?' do
     expect('hi'.antigram?('bye')).to(eq'you have got yourself and antigram')
   end
   it 'if not antigram but letters match' do
-    expect('hello'.antigram?('goodbye')).to(eq'this is not an antigram but has matching letters')
+    expect('hello'.antigram?('goodbye')).to(eq'this is not an antigram')
   end
 end
