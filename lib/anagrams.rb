@@ -10,7 +10,7 @@ class String
       end
     end
 
-  define_method(:antigram?) do |word| #fix me!!
+  define_method(:antigram?) do |word|
     letters1 = self.downcase.chars.sort
     letters2 = word.downcase.chars.sort
     letters1.each() do |lets|
@@ -20,6 +20,7 @@ class String
         return "you have got yourself and antigram"
       end
     end
+    # output
   end
 
   def palidrome?
@@ -41,5 +42,9 @@ class String
     end
   end
   output
+  end
+
+  define_method(:clean_string) do
+    input_mod = self.gsub!(/[^0-9A-Za-z]/,'')
   end
 end
