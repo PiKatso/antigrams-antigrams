@@ -1,15 +1,14 @@
-# ruby code
 class String
   #code for testing anagram/matching letters
   define_method(:anagram?) do |word|
-     if(self.downcase.chars.sort == word.downcase.chars.sort)
-        true
-        return "it is an anagram"
-      else
-        false
-        return "it is not an anagram"
-      end
+   if(self.downcase.chars.sort == word.downcase.chars.sort)
+      true
+      return "yay, an anagram!"
+    else
+      false
+      return "not an anagram"
     end
+  end
 
   #code for testing antigram/no matching letters
   define_method(:antigram?) do |word|
@@ -17,9 +16,9 @@ class String
     letters2 = word.downcase.chars.sort
     letters1.each() do |lets|
       if letters2.include?(lets)
-        return "this is not an antigram"
+        return "not an antigram"
       else()
-        return "you have got yourself and antigram"
+        return "antigram"
       end
     end
     # output
@@ -28,21 +27,23 @@ class String
   #code for testing palidrome/matching letters & order
   def palidrome?
     if self.downcase == self.downcase.reverse
-      "it is a palidrome"
+      true
+      "yay, a palidrome!"
     else
-      "it is not a palidrome"
+      "not a palidrome"
     end
   end
 
-  #code for testing valid word? FIX ME!!!
+  #code for testing valid word
   define_method(:valid_word) do
     letters = self.downcase
-  output = "please enter a valid word"
-    if letters.match(/[aeiouy]/)
-      output = "it is a valid word"
-    end
-  output
-end
+    output = "please enter a valid word"
+      if letters.match(/[aeiouy]/)
+        true
+        output = "valid word"
+      end
+    output
+  end
 
   #code for removing extra spaces, symbols, etc.
   define_method(:clean_string) do
