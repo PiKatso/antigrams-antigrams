@@ -37,3 +37,9 @@ describe 'String#antigram?' do
     expect('hello'.antigram?('goodbye')).to(eq'this is not an antigram')
   end
 end
+
+describe 'String#clean_string' do
+  it 'will take user input and clean removing symbols and numbers' do
+    expect('hell0'.clean_string).to(eq 'hell')
+  end
+end

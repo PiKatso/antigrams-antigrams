@@ -9,6 +9,6 @@ set(:show_exceptions, false)
 #     fill_in('input1', :with => 'cat')
 #     fill_in('input2', :with => 'tac')
 #     click_button('Find Out')
-#     expect(page).to have_content ('Is your word and Anagram? it is an anagram')
+#     expect('/results').to have_content ('Is your word and Anagram? it is an anagram')
 #   end
 # end
