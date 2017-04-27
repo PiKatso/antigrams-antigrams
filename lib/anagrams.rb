@@ -34,25 +34,27 @@ class String
     end
   end
 
-  #code for removing extra spaces, symbols, etc.
-  define_method(:clean_string) do
-    input_mod = self.gsub!(/[^0-9A-Za-z]/,'')
-  end
-end
-
-class Array
-#code for testing valid word? FIX ME!!!
+  #code for testing valid word? FIX ME!!!
   define_method(:valid_word) do
     letters = self.downcase.split("")
-    char= ["a","e","i","o","u","y"]
-    output = ""
-    letters.each() do |letter|
-    if letters.include?(char)
-      output = "it is a valid word"
-    else
-      output = "please enter a valid word"
+    # output = "please enter a valid word"
+    #   if letters =~ /aeiouy/
+    #     output = "it is a valid word"
+    #   end
+    # output
+    vowels = ["a","e","i","o","u","y"]
+    output = "please enter a valid word"
+    letters.each() do |vowels|
+      if letters.include?(vowels)
+        output = "it is a valid word"
+      end
     end
+    output
   end
-  output
-end
+
+  #code for removing extra spaces, symbols, etc.
+  define_method(:clean_string) do
+    input_mod = self.gsub(/[[:alpha:]]/ )
+    # (/[^A-Za-z]/,'')
+  end
 end

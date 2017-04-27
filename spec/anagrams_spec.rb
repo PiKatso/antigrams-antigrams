@@ -4,7 +4,7 @@ require 'anagrams'
 
 describe 'String#anagram?' do
   # first spec
-  it 'takes user input and evaluates if input is anagram' do
+  it 'takes user input and evaluates if input is valid word' do
     expect('cat'.anagram?('tac')).to(eq 'it is an anagram')
   end
   # second spec
