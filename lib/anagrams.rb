@@ -36,25 +36,16 @@ class String
 
   #code for testing valid word? FIX ME!!!
   define_method(:valid_word) do
-    letters = self.downcase.split("")
-  # output = "please enter a valid word"
-  #   if letters.include?(/[aeiouy]+/i)
-  #     output = "it is a valid word"
-  #   end
-  # output
-
-    vowels = ["a","e","i","o","u","y"]
-    output = "please enter a valid word"
-    letters.each() do |vowels|
-      if letters.include?(vowels)
-        output = "it is a valid word"
-      end
+    letters = self.downcase
+  output = "please enter a valid word"
+    if letters.match(/[aeiouy]/)
+      output = "it is a valid word"
     end
-    output
-  end
+  output
+end
 
   #code for removing extra spaces, symbols, etc.
   define_method(:clean_string) do
-    modified_string = self.gsub(/[^A-Za-z]/,"") #(/[^[:alpha:]]/,"") also works
+    modified_string = self.downcase.gsub(/[^A-Za-z]/,"") #(/[^[:alpha:]]/,"") also works
   end
 end
