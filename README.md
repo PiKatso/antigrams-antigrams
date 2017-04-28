@@ -18,7 +18,9 @@
 
 _A user should be able to enter any input and receive a response. If the user enters a valid work or string of word, the user should have their input evaluated for the words anagrams/antigrams and wether it's a palidrome_
 
-_link to site on Github : _
+_link to site on Github : https://github.com/PiKatso/antigrams-antigrams
+
+_link to site on Heroku : https://powerful-headland-50641.herokuapp.com
 
 ## Setup/Installation Requirements
 
