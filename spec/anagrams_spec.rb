@@ -33,8 +33,11 @@ describe 'String#antigram?' do
   it 'if user input is not an anagram, check if it is an antigram' do
     expect('hi'.antigram?('bye')).to(eq'antigram')
   end
-  it 'if not antigram but letters match' do
+  it 'if not antigram' do
     expect('hello'.antigram?('goodbye')).to(eq'not an antigram')
+  end
+  it 'if not antigram' do
+    expect('hello'.antigram?('hi')).to(eq'not an antigram')
   end
 end
 

@@ -11,17 +11,15 @@ class String
   end
 
   #code for testing antigram/no matching letters
+  #used string interpolation to create reg ex that worked and eliminated the need to call methods on my input
   define_method(:antigram?) do |word|
-    letters1 = self.downcase.chars.sort
-    letters2 = word.downcase.chars.sort
-    letters1.each() do |lets|
-      if letters2.include?(lets)
-        return "not an antigram"
-      else()
-        return "antigram"
+    letters1 = self
+    letters2 = word
+      output = "antigram"
+      if letters1.match(/[#{letters2}]/i)
+        output ="not an antigram"
       end
-    end
-    # output
+    output
   end
 
   #code for testing palidrome/matching letters & order
